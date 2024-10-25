@@ -1,12 +1,12 @@
 const args = process.argv;
 const sliced = args.slice(2);
-function sumOfArr(arr) {
+const sumOfArr = function(arr) {
   let num = 0;
-  for(let item of arr) {
+  for (let item of arr) {
     const strToNum = Number(item);
-    if (strToNum > 0) 
+    if (strToNum > 0)
       num += strToNum;
   }
-return num;
-}
+  return num;
+};
 console.log(sumOfArr(sliced));
