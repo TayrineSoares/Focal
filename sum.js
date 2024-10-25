@@ -4,8 +4,7 @@ const sumOfArr = function(arr) {
   let num = 0;
   for (let item of arr) {
     const strToNum = Number(item);
-    if (strToNum > 0)
-      num += strToNum;
+    num += strToNum;
   }
   return num;
 };
