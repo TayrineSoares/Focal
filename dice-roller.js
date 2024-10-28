@@ -5,3 +5,6 @@ function rollDice(numDice) {
   }
   return results;
 }
+const numDice = parseInt(process.argv[2]);
+const results = rollDice(numDice);
+console.log(`Rolled ${numDice} dice: ${results}`);
