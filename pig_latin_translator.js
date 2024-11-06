@@ -1,15 +1,14 @@
-//  Convert a word to pig latin by taking its first letter, moving it to the end of the word, then adding "ay" after it all.
+var originalWords = process.argv.slice(2);
+var pigLatinWords = [];
 
-const originalWords = process.argv.slice(2);
-const pigLatinWords = [];
 
-function translateToPigLatin(word) {
-  return word.slice(1) + word[0] + "ay";
-}
-
-for (let i = 0; i < originalWords.length; i++) {
-  //console.log(translateToPigLatin(originalWords[i]));
+for (var i = 0; i < originalWords.length; i++) {
+  console.log(translateToPigLatin(originalWords[i]));
   pigLatinWords.push(translateToPigLatin(originalWords[i]));
 }
 
 console.log(pigLatinWords.join(" "));
+
+function translateToPigLatin(word) {
+  return word.slice(1, word.length) + word[0] + "ay";
+}
